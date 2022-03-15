@@ -27,8 +27,7 @@ public class loadServiceImplementation implements LoadService{
 
     @Override
     public List<LoadDetails> getLoadDetails() {
-
-        return null;
+        return list;
     }
     
 }
