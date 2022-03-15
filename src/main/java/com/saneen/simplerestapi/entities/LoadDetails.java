@@ -28,6 +28,8 @@ public class LoadDetails {
         this.date = date;
     }
 
+    public LoadDetails(){}
+
     public String getLoadingPoint() {
         return this.loadingPoint;
     }
