@@ -1,6 +1,7 @@
 package com.saneen.simplerestapi.controller;
 
 import java.util.List;
+import java.util.UUID;
 
 import com.saneen.simplerestapi.entities.LoadDetails;
 import com.saneen.simplerestapi.services.LoadService;
@@ -8,11 +9,14 @@ import com.saneen.simplerestapi.services.LoadService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class MyController {
+
+
 
     @Autowired
     private LoadService loadService;
@@ -23,8 +27,8 @@ public class MyController {
     }
 
     @GetMapping("/load/{loadID}")
-    public List<LoadDetails> getLoad(){
-        
+    public LoadDetails getLoad(@PathVariable UUID shipperID){
+        return this.loadService.getLoad(shipperID);
     }
 
     
