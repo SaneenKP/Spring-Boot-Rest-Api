@@ -33,7 +33,7 @@ public class MyController {
         return loadService.getLoad(shipperID);
     }
 
-    @PostMapping("/load")
+    @PostMapping(path="/load" , consumes = "application/json")
     public LoadDetails addLoad(@RequestBody LoadDetails load){
         return this.loadService.addLoad(load);
     }
