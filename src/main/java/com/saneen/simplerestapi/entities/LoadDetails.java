@@ -1,6 +1,7 @@
 package com.saneen.simplerestapi.entities;
 
 import java.sql.Date;
+import java.util.UUID;
 
 public class LoadDetails {
 
@@ -11,11 +12,11 @@ public class LoadDetails {
     private int noOfTrucks;
     private int weight;
     private String comment;
-    private String shipperID;
+    private UUID shipperID;
     private String date;
 
 
-    public LoadDetails(String loadingPoint, String unloadingPoint, String productType, String truckType, int noOfTrucks, int weight, String comment, String shipperID, String date) {
+    public LoadDetails(String loadingPoint, String unloadingPoint, String productType, String truckType, int noOfTrucks, int weight, String comment, UUID shipperID, String date) {
         this.loadingPoint = loadingPoint;
         this.unloadingPoint = unloadingPoint;
         this.productType = productType;
@@ -83,11 +84,11 @@ public class LoadDetails {
         this.comment = comment;
     }
 
-    public String getShipperID() {
+    public UUID getShipperID() {
         return this.shipperID;
     }
 
-    public void setShipperID(String shipperID) {
+    public void setShipperID(UUID shipperID) {
         this.shipperID = shipperID;
     }
 
