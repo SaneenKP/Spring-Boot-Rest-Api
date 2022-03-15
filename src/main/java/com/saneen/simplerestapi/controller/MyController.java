@@ -28,10 +28,8 @@ public class MyController {
     }
 
     @GetMapping("/load/{shipperID}")
-    public List<LoadDetails> getLoad(@PathVariable UUID shipperID){
-        List<LoadDetails> load = new ArrayList<>();
-        load.add(this.loadService.getLoad(shipperID));
-        return load;
+    public LoadDetails getLoad(@PathVariable UUID shipperID){
+        return loadService.getLoad(shipperID);
     }
 
     
