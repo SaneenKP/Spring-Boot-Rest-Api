@@ -9,5 +9,6 @@ public interface LoadService {
 
     public List<LoadDetails> getLoadDetails();
     public LoadDetails getLoad(UUID shipperID);
+    public LoadDetails addLoad(LoadDetails load);
     
 }
