@@ -10,7 +10,9 @@ import java.util.UUID;
 import com.saneen.simplerestapi.entities.LoadDetails;
 
 import org.apache.tomcat.jni.Local;
+import org.springframework.stereotype.Service;
 
+@Service
 public class loadServiceImplementation implements LoadService{
 
     
