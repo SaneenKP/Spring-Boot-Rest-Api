@@ -20,6 +20,7 @@ public class loadServiceImplementation implements LoadService{
 
         list = new ArrayList<>();
         list.add(new LoadDetails("delhi", "jaipur", "chemicals", "canter", 1, 100, "this is just a comment", UUID.randomUUID(), LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-mm-yyyy"))));
+        list.add(new LoadDetails("kerala", "bangalore", "food", "canter", 1, 100, "this is just a comment", UUID.randomUUID(), LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-mm-yyyy"))));
     }
 
 
