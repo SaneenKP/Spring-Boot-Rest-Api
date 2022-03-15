@@ -47,6 +47,15 @@ public class loadServiceImplementation implements LoadService{
 
 
 
+    @Override
+    public LoadDetails addLoad(LoadDetails load) {
+
+        list.add(load);
+        return load;
+    }
+
+
+
 
     
 
