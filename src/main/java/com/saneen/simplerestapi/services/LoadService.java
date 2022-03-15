@@ -8,6 +8,6 @@ import com.saneen.simplerestapi.entities.LoadDetails;
 public interface LoadService {
 
     public List<LoadDetails> getLoadDetails();
-    public LoadDetails getLoad(UUID shiipperID);
+    public LoadDetails getLoad(UUID shipperID);
     
 }
