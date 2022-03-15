@@ -16,8 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MyController {
 
-
-
     @Autowired
     private LoadService loadService;
 
@@ -30,6 +28,4 @@ public class MyController {
     public LoadDetails getLoad(@PathVariable UUID shipperID){
         return this.loadService.getLoad(shipperID);
     }
-
-    
 }
