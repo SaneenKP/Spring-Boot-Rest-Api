@@ -25,6 +25,8 @@ public class loadServiceImplementation implements LoadService{
         list.add(new LoadDetails("kerala", "bangalore", "food", "canter", 1, 100, "this is just a comment", UUID.randomUUID(), LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-mm-yyyy"))));
     }
 
+
+
     @Override
     public List<LoadDetails> getLoadDetails() {
         return list;
@@ -33,11 +35,20 @@ public class loadServiceImplementation implements LoadService{
     @Override
     public LoadDetails getLoad(UUID shipperID) {
 
+        LoadDetails loadDetails = new LoadDetails();
         for(LoadDetails load : list){
-            if(shipperID == load.getShipperID())
-                return load;
+            if(shipperID == load.getShipperID()){
+                loadDetails = load;
+            }
         }
-        return null;
+        return loadDetails;
     }
 
+
+
+
+    
+
+
+    
 }
