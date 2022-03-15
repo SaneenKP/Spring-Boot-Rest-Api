@@ -1,5 +1,6 @@
 package com.saneen.simplerestapi.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -16,6 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MyController {
 
+
+
     @Autowired
     private LoadService loadService;
 
@@ -24,8 +27,12 @@ public class MyController {
         return this.loadService.getLoadDetails();
     }
 
-    @GetMapping("/load/{loadID}")
-    public LoadDetails getLoad(@PathVariable UUID shipperID){
-        return this.loadService.getLoad(shipperID);
+    @GetMapping("/load/{shipperID}")
+    public List<LoadDetails> getLoad(@PathVariable UUID shipperID){
+        List<LoadDetails> load = new ArrayList<>();
+        load.add(this.loadService.getLoad(shipperID));
+        return load;
     }
+
+    
 }
