@@ -7,5 +7,6 @@ import com.saneen.simplerestapi.entities.LoadDetails;
 public interface LoadService {
 
     public List<LoadDetails> getLoadDetails();
+    public List<LoadDetails> getLoad();
     
 }
