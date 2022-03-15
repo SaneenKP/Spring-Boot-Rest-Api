@@ -12,12 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class MyController {
 
     @GetMapping("/load")
-    public String load(){
-        return "this is load";
-    }
-
     public List<LoadDetails> getLoadDetails(){
-        
+
     }
 
     
