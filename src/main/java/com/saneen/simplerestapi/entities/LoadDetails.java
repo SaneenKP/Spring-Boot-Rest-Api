@@ -14,6 +14,19 @@ public class LoadDetails {
     private String shipperID;
     private String date;
 
+
+    public LoadDetails(String loadingPoint, String unloadingPoint, String productType, String truckType, int noOfTrucks, int weight, String comment, String shipperID, String date) {
+        this.loadingPoint = loadingPoint;
+        this.unloadingPoint = unloadingPoint;
+        this.productType = productType;
+        this.truckType = truckType;
+        this.noOfTrucks = noOfTrucks;
+        this.weight = weight;
+        this.comment = comment;
+        this.shipperID = shipperID;
+        this.date = date;
+    }
+
     public String getLoadingPoint() {
         return this.loadingPoint;
     }
