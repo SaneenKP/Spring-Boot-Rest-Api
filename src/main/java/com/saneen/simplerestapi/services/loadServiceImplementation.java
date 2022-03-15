@@ -35,7 +35,7 @@ public class loadServiceImplementation implements LoadService{
     @Override
     public LoadDetails getLoad(UUID shipperID) {
 
-        LoadDetails loadDetails = new LoadDetails();
+        LoadDetails loadDetails =null; 
         for(LoadDetails load : list){
             if(shipperID == load.getShipperID()){
                 loadDetails = load;
