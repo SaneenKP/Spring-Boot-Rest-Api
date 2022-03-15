@@ -18,7 +18,7 @@ public class MyController {
 
     @GetMapping("/load")
     public List<LoadDetails> getLoadDetails(){
-        return loadService.getLoadDetails();
+        return this.loadService.getLoadDetails();
     }
 
     
